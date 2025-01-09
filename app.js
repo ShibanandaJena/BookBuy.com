@@ -15,6 +15,9 @@ const contact = require("./routes/contact");
 
 require("dotenv").config();
 
+const PORT = process.env.PORT || 9000;
+
+
 // Database fetch
 connectDB();
 
@@ -43,6 +46,6 @@ app.use('/api/v1',cart)
 app.use('/api/v1',contact)
 
 // Port Running
-app.listen(process.env.PORT,()=>{
+app.listen(PORT,()=>{
     console.log(`Server is running on port ${process.env.PORT}`)
 })
